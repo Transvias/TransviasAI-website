@@ -21,7 +21,7 @@ export default async function Home({ searchParams }: PageProps<"/">) {
               Conheça a ViA, a nova agente inteligente do Transvias.
             </h1>
             <p className="mt-4 text-base leading-relaxed text-foreground/80 lg:text-lg max-w-2xl">
-              Agora você pode receber pedidos de fretes diretamente do seu WhatsApp. <br />
+              Agora você pode responder pedidos de fretes diretamente do seu WhatsApp. <br />
               A ViA traz mais facilidade e oportunidades para o seu negócio.
             </p>
           </section>
