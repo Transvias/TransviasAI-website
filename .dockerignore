@@ -1,0 +1,10 @@
+node_modules
+.next
+.git
+.deploy
+.vercel
+coverage
+*.md
+.DS_Store
+.env*
+!.env.example
