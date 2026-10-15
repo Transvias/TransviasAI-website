@@ -8,6 +8,7 @@ import { fieldErrors, leadSchema, type LeadInput } from "@/lib/lead";
 
 type FormValues = {
   transportadora: string;
+  transportadoraId: string;
   nome: string;
   sobrenome: string;
   ddd: string;
@@ -22,9 +23,16 @@ function digitsOnly(value: string, maxLength: number) {
   return value.replace(/\D/g, "").slice(0, maxLength);
 }
 
-export function LeadForm({ transportadora }: { transportadora: string }) {
+export function LeadForm({
+  transportadora,
+  transportadoraId,
+}: {
+  transportadora: string;
+  transportadoraId: string;
+}) {
   const [values, setValues] = useState<FormValues>({
     transportadora,
+    transportadoraId,
     nome: "",
     sobrenome: "",
     ddd: "",
@@ -104,6 +112,7 @@ export function LeadForm({ transportadora }: { transportadora: string }) {
             </p>
           ) : null}
           <FieldError>{errors.transportadora}</FieldError>
+          <input type="hidden" name="transportadoraId" value={values.transportadoraId} />
         </Field>
 
         <Field data-invalid={errors.nome ? true : undefined}>

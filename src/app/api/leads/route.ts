@@ -31,7 +31,7 @@ export async function POST(request: Request) {
     return Response.json({ error: genericError }, { status: 500 });
   }
 
-  const { transportadora, nome, sobrenome, ddd, whatsapp } = parsed.data;
+  const { transportadora, transportadoraId, nome, sobrenome, ddd, whatsapp } = parsed.data;
   const subject = `Novo lead ViA: ${transportadora.replace(/[\r\n]+/g, " ").slice(0, 120)}`;
   const resend = new Resend(apiKey);
   const { error } = await resend.emails.send({
@@ -42,6 +42,7 @@ export async function POST(request: Request) {
       "Novo interesse na ViA",
       "",
       `Transportadora: ${transportadora}`,
+      ...(transportadoraId ? [`ID: ${transportadoraId}`] : []),
       `Nome: ${nome} ${sobrenome}`,
       `WhatsApp: (${ddd}) ${whatsapp}`,
     ].join("\n"),

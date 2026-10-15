@@ -15,6 +15,11 @@ export const leadSchema = z.object({
   ddd: z.string().regex(/^\d{2}$/, "O DDD deve ter 2 dígitos."),
   whatsapp: z.string().regex(/^\d{8,9}$/, "Informe 8 ou 9 dígitos, sem o DDD."),
   website: z.string().optional(),
+  transportadoraId: z
+    .string()
+    .trim()
+    .regex(/^$|^\d{1,12}$/, "O identificador da transportadora é inválido.")
+    .optional(),
 });
 
 export type LeadInput = z.infer<typeof leadSchema>;

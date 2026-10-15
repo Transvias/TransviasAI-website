@@ -3,12 +3,16 @@ import { HowItWorks } from "@/components/how-it-works";
 import { LeadForm } from "@/components/lead-form";
 import { SiteHeader } from "@/components/site-header";
 
+function firstParam(value: string | string[] | undefined) {
+  const raw = Array.isArray(value) ? value[0] : value;
+  return raw?.trim() ?? "";
+}
+
 export default async function Home({ searchParams }: PageProps<"/">) {
   const params = await searchParams;
-  const transportadoraParam = params.transportadora;
-  const transportadora = Array.isArray(transportadoraParam)
-    ? (transportadoraParam[0] ?? "")
-    : (transportadoraParam ?? "");
+  const transportadora = firstParam(params.transportadora).slice(0, 120);
+  const transportadoraIdParam = firstParam(params.id);
+  const transportadoraId = /^\d{1,12}$/.test(transportadoraIdParam) ? transportadoraIdParam : "";
 
   return (
     <div className="flex min-h-full w-full flex-col lg:min-h-screen lg:flex-row">
@@ -35,7 +39,7 @@ export default async function Home({ searchParams }: PageProps<"/">) {
             <p className="mt-2 mb-6 text-base leading-relaxed text-foreground/80">
               Preencha para receber a ativação no seu WhatsApp.
             </p>
-            <LeadForm transportadora={transportadora} />
+            <LeadForm transportadora={transportadora} transportadoraId={transportadoraId} />
           </section>
 
           <Faq />
