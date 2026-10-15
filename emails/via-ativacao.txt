@@ -1,0 +1,31 @@
+Assunto: A ViA leva os pedidos de frete até o seu WhatsApp
+
+Conheça a nova agente de IA do Transvias. Ative gratuitamente e aceite pedidos pelo WhatsApp ou pelo painel.
+
+Olá, [Name].
+
+Uma nova forma de receber e responder pedidos de frete
+
+A ViA é a nova agente de IA do Transvias. Ela intermedia os pedidos entre os clientes e a [Carrier] pelo WhatsApp, organizando as informações para você avaliar cada oportunidade.
+
+Quando chegar um pedido, você confere os dados da carga e decide como responder: pode aceitar pelo próprio WhatsApp ou pelo painel do Transvias. No painel, também acompanha prazos e vê seus pedidos organizados por status.
+
+Com a ViA, você pode:
+- Receber pedidos de frete pelo WhatsApp.
+- Consultar origem, destino, carga, peso, dimensões e valor da nota.
+- Aceitar um pedido pelo WhatsApp ou pelo painel.
+- Acompanhar a validade e o andamento dos pedidos no painel.
+- Falar com o cliente pelo WhatsApp após aceitar.
+
+A ativação é gratuita para transportadoras que anunciam no Transvias.
+
+Ative a ViA gratuitamente:
+https://LP_HOST/?transportadora={{NOME_TRANSPORTADORA}}&id={{ID_TRANSPORTADORA}}&utm_source=email&utm_medium=email&utm_campaign=via_ativacao&utm_content=texto#ativar
+
+Você vai preencher seus dados na próxima página e receber as instruções de ativação pelo WhatsApp.
+
+---
+Você recebe este e-mail porque a sua transportadora anuncia no Transvias.
+Para não receber novos comunicados, responda com SAIR.
+
+Copyright 2026 - Transvias - Todos os direitos reservados. Reprodução proibida.
