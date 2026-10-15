@@ -131,6 +131,25 @@
       color: var(--muted);
       font-size: 15px;
     }
+
+    .downloads {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 16px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .downloads a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      background: var(--gold);
+      color: var(--gold-ink);
+      font-weight: 700;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -144,10 +163,10 @@
       <h2>O e-mail</h2>
       <p>Assunto: <strong>A ViA leva os pedidos de frete até o seu WhatsApp</strong></p>
       <p>Pré-visualização: Conheça a nova agente de IA do Transvias. Ative gratuitamente e aceite pedidos pelo WhatsApp ou pelo painel.</p>
-      <p>Arquivos para colar no Sendy, no repositório <code>emails/</code>:</p>
-      <ul>
-        <li><code>via-ativacao.html</code></li>
-        <li><code>via-ativacao.txt</code></li>
+      <p>Baixe os arquivos para colar no Sendy:</p>
+      <ul class="downloads">
+        <li><a href="/email/arquivos/via-ativacao-html" download="via-ativacao.html">via-ativacao.html</a></li>
+        <li><a href="/email/arquivos/via-ativacao-txt" download="via-ativacao.txt">via-ativacao.txt</a></li>
       </ul>
       <p>O layout publicado em <a href="/email/preview.html">/email/preview.html</a> é só para ver. O botão dessa página não serve para a campanha.</p>
       <p class="note">As imagens já estão no ar, em <code>/email/</code>. Não precisa hospedar de novo.</p>
@@ -209,7 +228,7 @@ Maria Souza,maria@transportes.com.br,Transportes São João,Transportes%20S%C3%A
         <li>Criar uma lista nova. A lista do site só tem nome e e-mail.</li>
         <li>Criar os campos personalizados nesta ordem: <code>Carrier</code>, <code>CarrierUrl</code>, <code>CarrierId</code>.</li>
         <li>Importar o CSV do Vini. O Sendy compara pela posição das colunas. Se a tela de importação mostrar outra ordem, seguir a tela.</li>
-        <li>Colar <code>via-ativacao.html</code> e <code>via-ativacao.txt</code>. Assunto acima.</li>
+        <li>Colar os arquivos baixados no topo desta página. Assunto acima.</li>
         <li>Enviar um teste com nome que tenha espaço e acento, como Transportes São João, e abrir o botão. O campo Transportadora na landing page precisa chegar inteiro.</li>
       </ol>
       <p class="note">Se a lista tiver descadastro, configurar o cabeçalho List-Unsubscribe no Sendy.</p>
