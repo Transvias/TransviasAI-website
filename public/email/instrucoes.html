@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>ViA — instruções do e-mail de ativação</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000f19;
+      --card: #001524;
+      --line: rgb(255 255 255 / 14%);
+      --text: #ffffff;
+      --muted: #c5d0d8;
+      --gold: #f3c522;
+      --gold-ink: #000f19;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Outfit, Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    a { color: var(--gold); }
+
+    .wrap {
+      width: min(760px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 72px;
+    }
+
+    .logo { width: 180px; height: auto; }
+
+    .kicker {
+      margin: 28px 0 8px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 36px;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+    }
+
+    p { margin: 0 0 12px; }
+
+    .lead { color: var(--muted); font-size: 18px; }
+
+    section {
+      margin-top: 28px;
+      padding: 22px 22px 8px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+
+    .who {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--gold-ink);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    ol, ul { margin: 0 0 16px; padding-left: 1.2em; }
+    li { margin: 0 0 8px; }
+    li strong { font-weight: 600; }
+
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 14px;
+    }
+
+    code {
+      padding: 1px 6px;
+      border-radius: 6px;
+      background: rgb(255 255 255 / 8%);
+    }
+
+    pre {
+      margin: 0 0 16px;
+      padding: 14px 16px;
+      overflow-x: auto;
+      white-space: pre;
+      border-radius: 12px;
+      background: #00080e;
+      color: var(--gold);
+    }
+
+    table {
+      width: 100%;
+      margin: 0 0 16px;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    th, td {
+      padding: 10px 8px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+    }
+
+    th { color: var(--gold); font-weight: 600; }
+
+    .note {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <img class="logo" src="/brand/Logo-Transvias-AI.svg" alt="Transvias AI">
+    <p class="kicker">Time Transvias</p>
+    <h1>E-mail de ativação da ViA</h1>
+    <p class="lead">O e-mail está pronto e a landing page já preenche a transportadora a partir do link. Esta página é o combinado do time.</p>
+
+    <section>
+      <h2>O e-mail</h2>
+      <p>Assunto: <strong>A ViA leva os pedidos de frete até o seu WhatsApp</strong></p>
+      <p>Pré-visualização: Conheça a nova agente de IA do Transvias. Ative gratuitamente e aceite pedidos pelo WhatsApp ou pelo painel.</p>
+      <p>Arquivos para colar no Sendy, no repositório <code>emails/</code>:</p>
+      <ul>
+        <li><code>via-ativacao.html</code></li>
+        <li><code>via-ativacao.txt</code></li>
+      </ul>
+      <p>O layout publicado em <a href="/email/preview.html">/email/preview.html</a> é só para ver. O botão dessa página não serve para a campanha.</p>
+      <p class="note">As imagens já estão no ar, em <code>/email/</code>. Não precisa hospedar de novo.</p>
+    </section>
+
+    <section>
+      <h2>Conexão com a landing page</h2>
+      <p>O botão abre a página e leva o nome codificado e o ID. A página preenche o campo Transportadora e guarda o ID oculto. No envio do formulário, o aviso interno inclui esse ID.</p>
+      <pre>https://transvias-ai-website.vercel.app/?transportadora=[CarrierUrl]&amp;id=[CarrierId]#ativar</pre>
+      <p class="note">O domínio definitivo, via.transvias.com.br, entra só quando o DNS existir. A Vercel publica sozinha cada push na main.</p>
+    </section>
+
+    <section>
+      <h2>Tags do Sendy</h2>
+      <table>
+        <thead>
+          <tr><th>Tag</th><th>Uso</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>[Name]</code></td><td>Saudação. Nome do contato. Se não houver pessoa no banco, o nome da empresa.</td></tr>
+          <tr><td><code>[Carrier]</code></td><td>Nome da transportadora, legível. Só no texto do e-mail.</td></tr>
+          <tr><td><code>[CarrierUrl]</code></td><td>O mesmo nome já codificado. Só no link.</td></tr>
+          <tr><td><code>[CarrierId]</code></td><td>ID numérico da Company. Fica oculto no formulário.</td></tr>
+        </tbody>
+      </table>
+      <p class="note">O Sendy cola a tag do jeito que está. Por isso o nome com espaço, acento ou &amp; não entra cru na URL.</p>
+    </section>
+
+    <section>
+      <span class="who">Vini</span>
+      <h2>Gerar a lista no banco</h2>
+      <p>CSV em UTF-8, só anunciantes. Cabeçalho nesta ordem:</p>
+      <pre>Name,Email,Carrier,CarrierUrl,CarrierId
+Maria Souza,maria@transportes.com.br,Transportes São João,Transportes%20S%C3%A3o%20Jo%C3%A3o,93001</pre>
+      <table>
+        <thead>
+          <tr><th>Coluna</th><th>Origem</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Name</td><td>Nome do contato. Sem pessoa no banco, usar o nome da empresa.</td></tr>
+          <tr><td>Email</td><td>Company.Email1</td></tr>
+          <tr><td>Carrier</td><td>Company.Name, como está no cadastro</td></tr>
+          <tr><td>CarrierUrl</td><td>O mesmo nome codificado para URL. Espaço vira %20, ã vira %C3%A3.</td></tr>
+          <tr><td>CarrierId</td><td>Company.Id, só números</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>Nome com vírgula entra entre aspas: <code>"Silva, Transportes Ltda"</code>.</li>
+        <li>Sem vírgula no fim da linha.</li>
+        <li>Não abrir e salvar no Excel. O acento e o <code>%20</code> se perdem.</li>
+        <li>Entregar o arquivo para o Celio.</li>
+      </ul>
+    </section>
+
+    <section>
+      <span class="who">Celio</span>
+      <h2>Subir no Sendy e testar</h2>
+      <ol>
+        <li>Criar uma lista nova. A lista do site só tem nome e e-mail.</li>
+        <li>Criar os campos personalizados nesta ordem: <code>Carrier</code>, <code>CarrierUrl</code>, <code>CarrierId</code>.</li>
+        <li>Importar o CSV do Vini. O Sendy compara pela posição das colunas. Se a tela de importação mostrar outra ordem, seguir a tela.</li>
+        <li>Colar <code>via-ativacao.html</code> e <code>via-ativacao.txt</code>. Assunto acima.</li>
+        <li>Enviar um teste com nome que tenha espaço e acento, como Transportes São João, e abrir o botão. O campo Transportadora na landing page precisa chegar inteiro.</li>
+      </ol>
+      <p class="note">Se a lista tiver descadastro, configurar o cabeçalho List-Unsubscribe no Sendy.</p>
+    </section>
+  </main>
+</body>
+</html>
