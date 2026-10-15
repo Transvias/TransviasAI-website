@@ -16,14 +16,17 @@
     PREHEADER:
     Conheça a nova agente de IA do Transvias. Ative gratuitamente e aceite pedidos pelo WhatsApp ou pelo painel.
 
-    ANTES DE ENVIAR — substitua https://LP_HOST pelo domínio da landing, sem barra no final.
+    Domínio atual: https://transvias-ai-website.vercel.app
+    Domínio definitivo, quando o DNS existir: https://via.transvias.com.br
     As imagens ficam em /email/ no mesmo site (public/email).
 
-    VARIÁVEIS (o provedor substitui antes do envio; o nome precisa ir codificado na URL):
-    {{NOME_TRANSPORTADORA}}  {{ID_TRANSPORTADORA}}
+    TAGS DO SENDY:
+    [Name]       nome do contato
+    [Carrier]    nome da transportadora — texto do e-mail e campo Transportadora
+    [CarrierId]  ID numérico da Company — segue oculto no formulário
 
-    CTA — preenche o campo Transportadora e guarda o ID:
-    https://LP_HOST/?transportadora={{NOME_TRANSPORTADORA}}&id={{ID_TRANSPORTADORA}}&utm_source=email&utm_medium=email&utm_campaign=via_ativacao&utm_content=cta#ativar
+    CTA:
+    https://transvias-ai-website.vercel.app/?transportadora=[Carrier]&id=[CarrierId]&utm_source=email&utm_medium=email&utm_campaign=via_ativacao&utm_content=cta#ativar
 
     Envie também a versão texto: emails/via-ativacao.txt
     Cabeçalho List-Unsubscribe no provedor, se a lista tiver descadastro.
@@ -66,12 +69,12 @@
         <table role="presentation" class="container" cellpadding="0" cellspacing="0" border="0" width="600" bgcolor="#000f19" style="width:100%; max-width:600px; background-color:#000f19;">
           <tr>
             <td style="padding:0; font-size:0; line-height:0;">
-              <img class="hero" src="https://LP_HOST/email/header-circuit.jpg" width="600" height="250" alt="" style="display:block; width:100%; max-width:600px; height:auto; border:0;">
+              <img class="hero" src="https://transvias-ai-website.vercel.app/email/header-circuit.jpg" width="600" height="250" alt="" style="display:block; width:100%; max-width:600px; height:auto; border:0;">
             </td>
           </tr>
           <tr>
             <td class="px" align="center" style="padding:28px 40px 8px 40px;">
-              <img src="https://LP_HOST/email/logo-transvias-ai.png" width="240" height="101" alt="Transvias AI" style="display:block; width:240px; max-width:100%; height:auto; border:0;">
+              <img src="https://transvias-ai-website.vercel.app/email/logo-transvias-ai.png" width="240" height="101" alt="Transvias AI" style="display:block; width:240px; max-width:100%; height:auto; border:0;">
             </td>
           </tr>
           <tr>
@@ -133,13 +136,13 @@
           <tr>
             <td class="px" align="center" style="padding:28px 40px 0 40px;">
               <!--[if mso]>
-              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://LP_HOST/?transportadora={{NOME_TRANSPORTADORA}}&amp;id={{ID_TRANSPORTADORA}}&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=via_ativacao&amp;utm_content=cta#ativar" style="height:48px; v-text-anchor:middle; width:300px;" arcsize="12%" strokecolor="#f3c522" fillcolor="#f3c522">
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://transvias-ai-website.vercel.app/?transportadora=[Carrier]&amp;id=[CarrierId]&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=via_ativacao&amp;utm_content=cta#ativar" style="height:48px; v-text-anchor:middle; width:300px;" arcsize="12%" strokecolor="#f3c522" fillcolor="#f3c522">
                 <w:anchorlock/>
                 <center style="color:#000f19; font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold;">Ative a ViA gratuitamente</center>
               </v:roundrect>
               <![endif]-->
               <!--[if !mso]><!-->
-              <a href="https://LP_HOST/?transportadora={{NOME_TRANSPORTADORA}}&amp;id={{ID_TRANSPORTADORA}}&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=via_ativacao&amp;utm_content=cta#ativar" style="background-color:#f3c522; border-radius:8px; color:#000f19; display:inline-block; font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:48px; text-align:center; text-decoration:none; padding:0 28px; -webkit-text-size-adjust:none;">Ative a ViA gratuitamente</a>
+              <a href="https://transvias-ai-website.vercel.app/?transportadora=[Carrier]&amp;id=[CarrierId]&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=via_ativacao&amp;utm_content=cta#ativar" style="background-color:#f3c522; border-radius:8px; color:#000f19; display:inline-block; font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:48px; text-align:center; text-decoration:none; padding:0 28px; -webkit-text-size-adjust:none;">Ative a ViA gratuitamente</a>
               <!--<![endif]-->
             </td>
           </tr>
@@ -151,7 +154,7 @@
           <tr>
             <td class="px" align="center" style="padding:10px 40px 0 40px; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:18px; color:#c5d0d8;">
               Se o botão não abrir, use este link:<br>
-              <a href="https://LP_HOST/?transportadora={{NOME_TRANSPORTADORA}}&amp;id={{ID_TRANSPORTADORA}}&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=via_ativacao&amp;utm_content=link_texto#ativar" style="color:#f3c522; text-decoration:underline;">https://LP_HOST/?transportadora={{NOME_TRANSPORTADORA}}&amp;id={{ID_TRANSPORTADORA}}#ativar</a>
+              <a href="https://transvias-ai-website.vercel.app/?transportadora=[Carrier]&amp;id=[CarrierId]&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=via_ativacao&amp;utm_content=link_texto#ativar" style="color:#f3c522; text-decoration:underline;">https://transvias-ai-website.vercel.app/?transportadora=[Carrier]&amp;id=[CarrierId]#ativar</a>
             </td>
           </tr>
 

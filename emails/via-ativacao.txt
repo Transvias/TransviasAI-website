@@ -20,7 +20,7 @@ Com a ViA, você pode:
 A ativação é gratuita para transportadoras que anunciam no Transvias.
 
 Ative a ViA gratuitamente:
-https://LP_HOST/?transportadora={{NOME_TRANSPORTADORA}}&id={{ID_TRANSPORTADORA}}&utm_source=email&utm_medium=email&utm_campaign=via_ativacao&utm_content=texto#ativar
+https://transvias-ai-website.vercel.app/?transportadora=[Carrier]&id=[CarrierId]&utm_source=email&utm_medium=email&utm_campaign=via_ativacao&utm_content=texto#ativar
 
 Você vai preencher seus dados na próxima página e receber as instruções de ativação pelo WhatsApp.
 
